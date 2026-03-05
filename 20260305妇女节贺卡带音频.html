@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>妇女节快乐 · 给我的妈妈李晓兰</title>
+    <style>
+        /* 页面整体样式：让所有内容居中，并设置温暖的背景 */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #fbc2c2 0%, #f8e0e0 100%);
+            font-family: 'Microsoft YaHei', '楷体', 'KaiTi', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 视频卡片容器 */
+        .card {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 245, 245, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 40px 40px 30px 30px;
+            box-shadow: 0 25px 40px rgba(230, 120, 140, 0.25),
+                        0 0 0 2px #fff8f8 inset,
+                        0 0 0 4px #ffc1cc inset;
+            padding: 30px 30px 20px 30px;
+            transition: all 0.3s ease;
+        }
+
+        /* 妇女节标题 */
+        .greeting {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .greeting h1 {
+            font-size: 2.6rem;
+            color: #b3455b;
+            text-shadow: 3px 3px 0 #ffe2e2, 6px 6px 0 rgba(255, 170, 170, 0.3);
+            margin: 0 0 5px 0;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .greeting h2 {
+            font-size: 2rem;
+            color: #b3455b;
+            margin: 0;
+            font-weight: 400;
+            background: #ffefef;
+            display: inline-block;
+            padding: 0.2rem 2rem;
+            border-radius: 60px;
+            box-shadow: 0 4px 8px #ffb6b6;
+        }
+
+        /* 视频容器 — 保证内部 iframe 完美居中且圆润 */
+        .video-container {
+            width: 100%;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 12px 25px rgba(190, 70, 80, 0.3);
+            background: #ffd9e2;
+            border: 4px solid #ffeef0;
+        }
+
+        .video-container iframe {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;      /* 保持 16:9 比例，不再用固定 height="600" */
+            border: none;
+            margin: 0;
+        }
+
+        /* 可爱提示文字 */
+        .hint {
+            text-align: center;
+            color: #b35d6b;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            background: #ffefefcc;
+            padding: 12px 18px;
+            border-radius: 50px;
+            display: inline-block;       /* 让背景根据内容收缩 */
+            width: auto;
+            border: 2px dashed #ff99aa;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 8px 0 #d49ca3;
+        }
+
+        .hint span {
+            display: inline-block;
+            animation: bounce 2s infinite;
+            font-size: 2rem;
+            margin-left: 8px;
+        }
+
+        /* 爱心浮动动画 */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* 写给妈妈的小诗 */
+        .poem {
+            text-align: center;
+            margin-top: 25px;
+            color: #9f4d5c;
+            font-size: 1.3rem;
+            background: #ffd9e2a0;
+            padding: 15px 25px;
+            border-radius: 60px 60px 20px 20px;
+            border-bottom: 6px solid #ffb1bf;
+        }
+        .poem p {
+            margin: 8px 0;
+        }
+        .poem .signature {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #c13b55;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <!-- 节日大标题 -->
+    <div class="greeting">
+        <h1>🌸 妇女节快乐 🌸</h1>
+        <h2>给我的妈妈</h2>
+    </div>
+
+    <!-- 视频区域（已按你的要求配置好：无弹幕+高清） -->
+    <div class="video-container">
+        <iframe
+            src="https://player.bilibili.com/player.html?bvid=BV1X64y117eZ&page=1&danmaku=0&high_quality=1&autoplay=0"
+            scrolling="no"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+            allow="fullscreen">
+        </iframe>
+    </div>
+
+    <!-- 点击播放的可爱提示（已居中，且带小动画） -->
+    <div style="text-align: center;">
+        <div class="hint">
+            ✨ 点击视频播放声音 ✨
+            <span>🥰</span>
+        </div>
+    </div>
+
+    <!-- 一点点给妈妈的话（可选） -->
+    <div class="poem">
+        <p>🌷 愿您永远像花儿一样美丽 🌷</p>
+        <p>🎵 送您一段暖心小视频 🎵</p>
+        <p class="signature">—— 爱您的孩子</p>
+    </div>
+</div>
+
+<!-- 底部小小的装饰（飘浮爱心，纯css气氛组） -->
+<div style="position:fixed; bottom:10px; right:20px; opacity:0.4; font-size:2rem; pointer-events:none;">
+    💗💐💗
+</div>
+</div>
+<div class="confesstion">
+    <br>
+    <p>亲爱的妈妈：</p>
+    <p>   今天是属于你的节日之一，节日快乐!</p>
+    <p>   妈妈，你先是你自己，然后才是我的妈妈。</p>
+    <p>   谢谢你用独立而自由的灵魂，教会我如何生活。</p>
+    <p>   愿你拥有一丝闲暇，也愿你往后的每一天都活得自在、舒展、如己所愿。</p>
+    <br>
+    <div style="text-align:right;"class="inscribe">
+        <p> 你的女儿</p>
+        <p> 2026.03.08</p>
+    </div>
+</div>
+</body>
+</html>
